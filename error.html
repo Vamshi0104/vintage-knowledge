@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ERROR PAGE!!!</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="icon" href="VK.png">
+<style>
+img
+{
+width:1600px;
+height:auto;
+overflow: hidden;
+}
+a:link, a:visited {
+  background-color:black;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover{
+  background-color: green;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+background-color:black;
+overflow: hidden;
+}
+img[alt="www.000webhost.com"]{display:none;}
+.container {
+  position: absolute;
+  max-width: 1366px;
+max-height:615px;
+  margin: 0 auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+p
+{
+font-size:18px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <img src="13.jpg" alt="Notebook" style="width:100% ;">
+  <div class="content">
+    <h1 align="center">OOPS!!! PAGE NOT FOUND </h1>
+    <p>Redirecting to HOME Page in 3 Seconds .... &emsp;&emsp;&emsp; or else  <a href="index.html" target="_self">Click Here!</a></p>
+  </div>
+</div>
+<script>
+ setTimeout(function(){
+            window.location.href = 'index.html';
+         }, 2000);
+history.pushState(null, null, location.href);
+    window.onpopstate = function () {
+        history.go(1);
+    };
+</script>
+</body>
+</html>

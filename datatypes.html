@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Datatypes in C - Vintage Knowledge</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Datatype is an Attribute of Data which tells the Compiler or Interpreter how the Programmer intends to use the Data.The most basic Data-Types in C are char,int,float,double,void.Learn more about various Datatypes in C...">
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0" >
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="icon" href="VK.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<a href="#" id="scroll" style="display: none;"><span></span></a>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+     </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+<li><a href="#intro"><b>Introduction to DataTypes</b></a></li>
+    <li><a href="#char"><b>char</b></a></li>
+         <li><a href="#int"><b>int</b></a></li>
+         <li><a href="#float"><b>float</b></a></li>
+         <li><a href="#void"><b>void</b></a></li>
+  <li><a href="#range">Range of Primary Datatypes</a></li>
+          <li><a href="#examples">Examples</a></li>
+          <li><a href="#section3">About Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>    
+
+<style>
+img[alt="www.000webhost.com"]{display:none;}
+body
+{
+background-color:black;
+color:white;
+}
+.svg--source {
+  display: none;
+}
+.svg--icon {
+  width: 100%;
+  max-width: 5rem;
+  height: 100%;
+  max-height: 5rem;
+  display: block;
+  margin: 0 auto;
+  fill: currentColor;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.share {
+  width: 5rem;
+  height: 5rem;
+  float: left;
+  margin: .5rem 1rem .5rem 0;
+  color: #353c4a;
+  border: .125rem solid #f3f3f3;
+  box-shadow: 0 0 8px 0 rgba(50, 50, 50, 0.15);
+  border-radius: 50%;
+  transition: 250ms;
+}
+.share:last-child {
+  margin-right: 0;
+}
+.share:focus {
+  outline-color: inherit;
+}
+.twitter:hover, .twitter:focus {
+  color: #00ACED;
+  box-shadow: 0 0 24px 0 #00ACED;
+}
+.instagram:hover, .instagram:focus {
+  color: #8a3ab9;
+  box-shadow: 0 0 24px 0  #8a3ab9;
+}
+.github:hover, .github:focus {
+  color: green;
+  box-shadow: 0 0 24px 0 green;
+}
+.facebook:hover, .facebook:focus {
+  color: #3b5998;
+  box-shadow: 0 0 24px 0 #3b5998;
+}
+html
+{
+scroll-behavior: smooth;
+}
+h1
+{
+font-family:Serif;
+}
+h2
+{
+font-size:18px;
+}
+h3
+{
+font-family:cursive;
+color:lime;
+}
+p
+{
+font-family:Serif;
+font-size:22px;
+}
+a.previous{
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 5px;
+   background-color: #f1f1f1;
+  color: black;
+}
+
+a.previous:hover {
+  background-color: green;
+  color: white;
+}
+.hello
+{
+font-size:20px;
+color:blue;
+}
+.hello:hover
+{
+color:green;
+}
+#intro{padding-top:50px;height:700px;color: #fff; background-color: black;}
+#char{padding-top:50px;height:700px;color: #fff; background-color: black;}
+#int{padding-top:50px;height:700px;color: #fff; background-color: black;}
+#float{padding-top:50px;height:700px;color: #fff; background-color: black;}
+#void{padding-top:50px;height:700px;color: #fff; background-color: black;}
+#range{padding-top:50px;height:700px;color: #fff; background-color: black;}
+#examples{padding-top:50px;height:700px;color: #fff; background-color: black;}
+#section3{padding-top:50px;height:700px;color: #fff; background-color: black;}
+#when {
+  padding: 50px 0;
+  text-align: center;
+  margin-top: 20px;
+font-size:22px;
+}
+#yes1:link{
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+background-color: #1E90FF;
+  display: inline-block;
+}
+
+#yes1:hover {
+  background-color: green;
+}
+#nono
+{
+  background-color: black;
+border:5px solid green;
+}
+#scroll {
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    background-color:#3498db;
+    text-indent:-9999px;
+    display:none;
+    -webkit-border-radius:60px;
+    -moz-border-radius:60px;
+    border-radius:60px
+}
+#scroll span {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-8px;
+    margin-top:-12px;
+    height:0;
+    width:0;
+    border:8px solid transparent;
+    border-bottom-color:#ffffff;
+}
+#scroll:hover {
+    background-color:green;
+    opacity:1;filter:"alpha(opacity=100)";
+    -ms-filter:"alpha(opacity=100)";
+}
+@media only screen and (max-width:620px) {
+#scroll
+{
+   right:30px;
+   bottom:40px;
+   width:50px;
+   height:50px;
+}
+}
+@media only screen and (max-width:620px) {
+   .container-fluid p{
+font-size:16px;
+  }
+ .container-fluid h1
+{
+font-size:23px;
+}
+@media screen and (max-width: 600px) {
+ .container-fluid p
+{
+font-size:14px;
+}
+ .container-fluid h1
+{
+font-size:16px;
+}
+}
+@media screen and (min-width: 601px) and (max-width: 800px) {
+ .container-fluid p
+{
+font-size:18px;
+}
+ .container-fluid h1
+{
+font-size:21px;
+}
+}
+@media screen and (min-width: 801px) and (max-width: 1100px) {
+ .container-fluid p
+{
+font-size:20px;
+}
+ .container-fluid h1
+{
+font-size:21px;
+}
+}
+</style>
+<div id="intro" class="container-fluid">
+<a href="index.html" class="previous">&Lt; Back to Search</a> 
+ <center><h1><u>Introduction to Datatypes</u></h1></center>
+<h1><u>Definition</u></h1>
+<p> &Gt;A Data Type is a classification that specifies which type of value a variable has and what type of mathematical, relational or logical operations can be applied to it without causing an error.For example, string is a data type that is used to classify text..<br>
+ &Gt;Each datatype has different storage capacities.<br>&emsp;&rArr; So,<b>C</b> language supports 2 different type of data types:</p>
+<p> I ) Primitive Data_types ----&Gt; <b>char , int , float , double , void  </b></p>
+<p>II ) Derived Data_types ----&Gt; <b><a href="array.html" title="Click to Know More...">array</a> , <a href="struct.html"  title="Click to Know More...">stucture</a>,<a href="union.html"  title="Click to Know More..."> union</a> and <a href="pointer.html"  title="Click to Know More...">pointer</a></b></p>
+<h2><b>#</b> Additional three more data types have been added in <a href="https://en.wikipedia.org/wiki/C99" title="Learn More about...">C99</a>:<br>
+<ul>
+<li>_Bool</li>
+<li>_Complex</li>
+<li>_Imaginary</li>
+</ul>
+</h2>
+<p><b>#</b> Memory storage differs from 32 bit Architecture to 64 bit Architecture.<br>&emsp;&rArr;For example,the size of  "int" keyword is 2 bytes in 32 bit whereas 4 bytes in 64 bit ...</p>
+<p> &rarr; Have a look over <a href="datatypes.html#range">format specifiers</a> of primitive datatypes as soon you complete... 
+</div>
+<br>
+<div id="char" class="container-fluid">
+ <center><h1><u>char</u></h1></center>
+<h1><u>Definition</u></h1>
+<p>&Gt; <b>char</b> is keyword in C used for declaring character type varaibles.
+</p>
+<h1><u>Syntax</u></h1>
+<pre>
+char <variabe name> ;
+</pre>
+<h1><u>Some Points to be known about <b>char</b></u></h1>
+<p>
+&Gt; The size of the character variable is 1 byte.
+<br><br>
+&Gt; For example,Initialization of character type varaiable
+<b>char p = 'y' ; </b>
+<br><br>
+&Gt; We can store only one character using character data type.
+<br><br>
+&Gt; The Range of character type varies from -128 to 127 ( signed char ) and 0 to 255 (unsigned char).
+</p>
+</div>
+<br><br><br><br><br>
+<div id="int" class="container-fluid">
+ <center><h1><u>int</u></h1></center>
+<h1><u>Definition</u></h1>
+<p>&Gt; <b>int</b> is keyword in C used for declaring integer type varaibles.
+</p>
+<h1><u>Syntax</u></h1>
+<pre>
+int &lt;variable_name> ; // '< >' indicates variable name is mandatory.
+</pre>
+<h1><u>Some Points to be known about <b>int</b></u></h1>
+<br>
+<p>
+&Gt; Integers are whole numbers that can have both zero, positive and negative values but no decimal values are included.
+<br><br>
+&Gt; For example, <b>int a = 5;</b> is initialization of integer variable.The storage size of int data type is 2 or 4 or 8 byte which depends on the Architecture used (16 bit or 32 bit or 64 bit).
+<br><br>
+&Gt;In C programming we can declare multiple variables at once. For example , <b>"int a,b;"</b>
+<br><br>
+&Gt; If we want to use the integer value that crosses the above limit(range), we can prefer for "long int" and "long long int" by using <a href="long.html">long</a> keyword for which the limits are very high.
+</p>
+</div>
+<br>
+<div id="float" class="container-fluid">
+ <center><h1><u>float and double</u></h1></center>
+<h1><u>Definition</u></h1>
+<p>&Gt;<b>float</b> and <b>double</b> are keywords in C that are used to hold decimal values of integer that is hold real number.</p>
+<h1><u>Syntax</u></h1>
+<pre>
+float &lt;variable_name>;
+</pre>
+<h1><u>Some Points to be known about <b>float and double</b></u></h1>
+<br>
+<p>
+&Gt; The size of float(4 bytes), double(8 bytes), long double(16 bytes) ,<a href="short.html">short</a>(2 bytes) ,long long(8 bytes) is fixed and idependent of Architecture used(32 bit or 64 bit).Floating-point numbers are also  represented in exponential format.<br> For example,
+<b>float t = 3.4e3</b>
+
+<br>
+<h3 align="center">&Gt;Difference between float and double ??</h3>
+<p> &emsp;&rarr; The size of float (Single Precision float data type) is 4 bytes. And the size of double (Double Precision float data type) is 8 bytes.</p>
+<p> &Gt;To, refer the range of char ,int, float and double  <a href="datatypes.html#range"> Click Here</a>.
+</p>
+</div>
+<br><br><br><br><br>
+<div id="void" class="container-fluid">
+ <center><h1><u>void</u></h1></center>
+<h1><u>Definition</u></h1>
+<p>&Gt;<b> void</b> datatype actually refers to an object that does not have a value of any type</p>
+<h1><u>Some Points to be known about <b>void</b></u></h1>
+<br>
+<p>
+&Gt;<b> void</b> is an incomplete type.
+<br><br>
+&Gt; Generally  void  is an empty data type and it used as a return type of functions that return no value in c.<br>For Example :<br>
+<b>&rarr;void  func(int n) </b>//It indicates that the function returns no result.<br>
+<b>&rarr;int func(void)  </b>//It indicates that the function has no parameters.<br>
+<br>
+&Gt; One thing that you must remember is if a function is not returning anything, it means that return type is <b>void</b>
+<br><br>
+&Gt; Therefore it is not possible to create variable of <b>void</b> type
+</p>
+</div>
+<br><br>
+<div id="range"  class="container-fluid">
+<p align="center" style="font-family:cursive;font-size:18px;">Have a Glance on Data_Types (64 bit) !!!</p>
+ &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;<img src="ranget.png" >
+ </div>
+<br>
+<div id="examples" class="container-fluid">
+ <h1><u>Example</u></h1><br>
+<pre>
+#include&lt;stdio.h&gt;
+int main(){
+int a=12;
+char b='B';
+float c=1.2;
+printf("value of a is %d\tvalue of b is %c\tvalue of c is %f",a,b,c);
+  return 0; // It returns integer if we eliminate '0' rewrite as return having void main() instead of int main() then the return type is <b>void</b>
+} //Output : value of a is 12   value of b is B   value of  c is 1.200000
+</pre>
+<br>
+<button onclick="fun()"  title="CLICK HERE..." id="nono" style="font-size:24px;color:green;">Learn More <i class="fa fa-check-square-o"></i></button>
+<div id="when">
+&#x22D9;Wanna Try & Learn More Examples ??<br><br><a href="dteg.html" target="_blank" id="yes1" style="color:white;">Click Here!!</a>
+</div>
+</div>
+<br>
+<div id="section3" class="container-fluid">
+<h1><u>Follow us on</u></h1><br>
+<p align="center">If you have any Queries Feel Free to Contact Us...</p>
+<h2 align="center"><u>Email</u> : Vintageknowledge@gmail.com</h2>
+<br>
+<h3 align="center">&rArr;Our Main Motto is your Understanding Programming in Simpler way.</h3><br>
+<h3>&nbsp;&Gt; Need to get in Touch ? We'd Love to bear from you !</h3>
+<svg class="svg--source" width="0" height="0" aria-hidden="true">
+ <symbol id="svg--twitter" viewbox="0 -7 15 30">
+    <path d="M15.36 3.434c-0.542 0.241-1.124 0.402-1.735 0.476 0.624-0.374 1.103-0.966 1.328-1.67-0.583 0.346-1.23 0.598-1.917 0.733-0.551-0.587-1.336-0.954-2.205-0.954-1.668 0-3.020 1.352-3.020 3.019 0 0.237 0.026 0.467 0.078 0.688-2.51-0.126-4.735-1.328-6.224-3.155-0.261 0.446-0.41 0.965-0.41 1.518 0 1.048 0.534 1.972 1.344 2.514-0.495-0.016-0.961-0.151-1.368-0.378 0 0.013 0 0.025 0 0.038 0 1.463 1.042 2.683 2.422 2.962-0.253 0.069-0.52 0.106-0.796 0.106-0.194 0-0.383-0.018-0.568-0.054 0.384 1.2 1.5 2.073 2.821 2.097-1.034 0.81-2.335 1.293-3.75 1.293-0.244 0-0.484-0.014-0.72-0.042 1.336 0.857 2.923 1.357 4.63 1.357 5.554 0 8.592-4.602 8.592-8.593 0-0.13-0.002-0.261-0.009-0.39 0.59-0.426 1.102-0.958 1.507-1.563z"/>
+  </symbol>
+<symbol id="svg--instagram" viewbox="0 -7 23 35">
+<path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" />
+  </symbol>
+<symbol id="svg--facebook" viewbox="0 -7 16 30">
+    <path d="M12 3.303h-2.285c-0.27 0-0.572 0.355-0.572 0.831v1.65h2.857v2.352h-2.857v7.064h-2.698v-7.063h-2.446v-2.353h2.446v-1.384c0-1.985 1.378-3.6 3.269-3.6h2.286v2.503z" />
+  </symbol>
+<symbol id="svg--github" viewbox="-30 -30 150 150">
+    <path d="M61.896,52.548c-3.59,0-6.502,4.026-6.502,8.996c0,4.971,2.912,8.999,6.502,8.999
+        c3.588,0,6.498-4.028,6.498-8.999C68.395,56.574,65.484,52.548,61.896,52.548z M84.527,29.132c0.74-1.826,0.777-12.201-3.17-22.132
+        c0,0-9.057,0.993-22.76,10.396c-2.872-0.793-7.736-1.19-12.597-1.19s-9.723,0.396-12.598,1.189C19.699,7.993,10.645,7,10.645,7
+        c-3.948,9.931-3.913,20.306-3.172,22.132C2.834,34.169,0,40.218,0,48.483c0,35.932,29.809,36.508,37.334,36.508
+        c1.703,0,5.088,0.004,8.666,0.009c3.578-0.005,6.965-0.009,8.666-0.009C62.191,84.991,92,84.415,92,48.483
+        C92,40.218,89.166,34.169,84.527,29.132z M46.141,80.574H45.86c-18.859,0-33.545-2.252-33.545-20.58
+        c0-4.389,1.549-8.465,5.229-11.847c6.141-5.636,16.527-2.651,28.316-2.651c0.045,0,0.093-0.001,0.141-0.003
+        c0.049,0.002,0.096,0.003,0.141,0.003c11.789,0,22.178-2.984,28.316,2.651c3.68,3.382,5.229,7.458,5.229,11.847
+        C79.686,78.322,65,80.574,46.141,80.574z M30.104,52.548c-3.588,0-6.498,4.026-6.498,8.996c0,4.971,2.91,8.999,6.498,8.999
+        c3.592,0,6.502-4.028,6.502-8.999C36.605,56.574,33.695,52.548,30.104,52.548z" />
+  </symbol>
+</svg>
+
+<div class="wrapper">
+<div class="connect">
+<a href="https://github.com/VintageKnowledge" class="share github" title="Git Hub">
+    <svg role="presentation" class="svg--icon">
+      <use xlink:href="#svg--github" />
+      <span class="clip"></span>
+    </svg>
+  </a>
+<a href="https://twitter.com/VintageKnowled1?s=08" class="share twitter" title="Twitter">
+    <svg role="presentation" class="svg--icon">
+      <use xlink:href="#svg--twitter" />
+    </svg>
+    <span class="clip"></span>
+  </a>
+<a href="https://instagram.com/vintage_knowledge?igshid=yvbae6zhhzb3" class="share instagram" title="Instagram">
+    <svg role="presentation" class="svg--icon">
+      <use xlink:href="#svg--instagram" />
+    </svg>
+    <span class="clip"></span>
+  </a>
+<a href="https://www.facebook.com/groups/510404846450879/" rel="author" class="share facebook" title="Face Book">
+    <svg role="presentation" class="svg--icon">
+      <use xlink:href="#svg--facebook" />
+      <span class="clip"></span>
+    </svg>
+  </a>
+<br><br><br><br><br><br>
+<h3 align="center">Happy Coding .... :) </h3>
+</div>
+<!--follow-->
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+function fun() {
+  var x = document.getElementById("when");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
+
+</script>
+

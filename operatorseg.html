@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Operators Examples</title>
+  <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="icon" href="VK.png">
+<a href="#" id="scroll" style="display: none;"><span></span></a>
+<style>
+img[alt="www.000webhost.com"]{display:none;}
+body
+{
+color:white;
+background-color: black;
+}
+.ex {
+  background-color: white;
+  color: black;
+  margin: 10px;
+  padding: 10px;
+ border-radius: 5px;
+overflow: auto;
+}
+html
+{
+scroll-behavior: smooth;
+}
+h1
+{
+font-family:Serif;
+}
+h2
+{
+font-size:18px;
+}
+
+a.previous{
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 5px;
+   background-color: #f1f1f1;
+  color: black;
+}
+
+a.previous:hover {
+  background-color: green;
+  color: white;
+}
+p
+{
+font-family:Serif;
+font-size:22px;
+}
+#scroll {
+    position:fixed;
+    right:10px;
+    bottom:10px;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    background-color:#3498db;
+    text-indent:-9999px;
+    display:none;
+    -webkit-border-radius:60px;
+    -moz-border-radius:60px;
+    border-radius:60px
+}
+#scroll span {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-8px;
+    margin-top:-12px;
+    height:0;
+    width:0;
+    border:8px solid transparent;
+    border-bottom-color:#ffffff;
+}
+#scroll:hover {
+    background-color:green;
+    opacity:1;filter:"alpha(opacity=100)";
+    -ms-filter:"alpha(opacity=100)";
+}
+@media screen and (max-width:620px) 
+{
+div.ex 
+{
+font-size:16px;
+}
+h1
+{
+font-size:23px;
+}
+}
+@media screen and (max-width: 600px) 
+{
+div.ex 
+{
+font-size:14px;
+}
+h1
+{
+font-size:16px;
+}
+}
+@media screen and (min-width: 601px) and (max-width: 800px) 
+{
+div.ex 
+{
+font-size:18px;
+}
+h1
+{
+font-size:21px;
+}
+}
+@media screen and (min-width: 801px) and (max-width: 1100px) 
+{
+div.ex 
+{
+font-size:20px;
+}
+h1
+{
+font-size:21px;
+}
+}
+</style>  
+</head>
+<a href="operator.html" class="previous">&Lt; Back to Page</a> 
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<center><h1><u>Arithmetic operators example</u></h1></center>
+<div class="ex">
+<pre>
+// Working of arithmetic operators
+#include <stdio.h>
+int main()
+{
+    int a = 9,b = 4, c;
+    
+    c = a+b;
+    printf("a+b = %d \n",c);
+    c = a-b;
+    printf("a-b = %d \n",c);
+    c = a*b;
+    printf("a*b = %d \n",c);
+    c = a/b;
+    printf("a/b = %d \n",c);
+    c = a%b;
+    printf("Remainder when a divided by b = %d \n",c);
+    
+    return 0;
+}
+</pre>
+</div>
+<h1><u>output</u></h1>
+<div class="ex">
+<pre>
+a+b = 13
+a-b = 5
+a*b = 36
+a/b = 2
+Remainder when a divided by b=1
+</pre>
+</div>
+</body></html>
+<br><br><br><br>
+<center><h1><u>Increment And Decrement operators example</u></h1></center>
+<div class="ex">
+<pre>
+// Working of increment and decrement operators
+#include <stdio.h>
+int main()
+{
+    int a = 10, b = 100;
+    float c = 10.5, d = 100.5;
+    printf("++a = %d \n", ++a);
+    printf("--b = %d \n", --b);
+    printf("++c = %f \n", ++c);
+    printf("--d = %f \n", --d);
+    return 0;
+}
+</pre>
+</div>
+<h1><u>output</u></h1>
+<div class="ex">
+<pre>
+++a = 11
+--b = 99
+++c = 11.500000
+++d = 99.500000
+</pre>
+</div>
+<br><br><br><br>
+<center><h1><u>Assignment operators example</u></h1></center>
+<div class="ex">
+<pre>
+// Working of assignment operators
+#include <stdio.h>
+int main()
+{
+    int a = 5, c;
+    c = a;      // c is 5
+    printf("c = %d\n", c);
+    c += a;     // c is 10 
+    printf("c = %d\n", c);
+    c -= a;     // c is 5
+    printf("c = %d\n", c);
+    c *= a;     // c is 25
+    printf("c = %d\n", c);
+    c /= a;     // c is 5
+    printf("c = %d\n", c);
+    c %= a;     // c = 0
+    printf("c = %d\n", c);
+    return 0;
+}
+</pre></div>
+<h1><u>output</u></h1>
+<div class="ex">
+<pre>
+c = 5 
+c = 10 
+c = 5 
+c = 25 
+c = 5 
+c = 0
+</pre></div>
+<br><br><br><br>
+<center><h1><u>Relational operators example</u></h1></center>
+<div class="ex">
+<pre>
+// Working of relational operators
+#include <stdio.h>
+int main()
+{
+    int a = 5, b = 5, c = 10;
+    printf("%d == %d is %d \n", a, b, a == b);
+    printf("%d == %d is %d \n", a, c, a == c);
+    printf("%d > %d is %d \n", a, b, a > b);
+    printf("%d > %d is %d \n", a, c, a > c);
+    printf("%d < %d is %d \n", a, b, a < b);
+    printf("%d < %d is %d \n", a, c, a < c);
+    printf("%d != %d is %d \n", a, b, a != b);
+    printf("%d != %d is %d \n", a, c, a != c);
+    printf("%d >= %d is %d \n", a, b, a >= b);
+    printf("%d >= %d is %d \n", a, c, a >= c);
+    printf("%d <= %d is %d \n", a, b, a <= b);
+    printf("%d <= %d is %d \n", a, c, a <= c);
+    return 0;
+}
+</pre></div>
+<h1><u>output</u></h1>
+<div class="ex">
+<pre>
+5 == 5 is 1
+5 == 10 is 0
+5 > 5 is 0
+5 > 10 is 0
+5 < 5 is 0
+5 < 10 is 1
+5 != 5 is 0
+5 != 10 is 1
+5 >= 5 is 1
+5 >= 10 is 0
+5 <= 5 is 1
+5 <= 10 is 1 
+</pre></div>
+<br><br><br><br>
+<center><h1><u>Logical operators example</u></h1></center>
+<div class="ex">
+<pre>
+// Working of logical operators
+#include <stdio.h>
+int main()
+{
+    int a = 5, b = 5, c = 10, result;
+    result = (a == b) && (c > b);
+    printf("(a == b) && (c > b) is %d \n", result);
+    result = (a == b) && (c < b);
+    printf("(a == b) && (c < b) is %d \n", result);
+    result = (a == b) || (c < b);
+    printf("(a == b) || (c < b) is %d \n", result);
+    result = (a != b) || (c < b);
+    printf("(a != b) || (c < b) is %d \n", result);
+    result = !(a != b);
+    printf("!(a == b) is %d \n", result);
+    result = !(a == b);
+    printf("!(a == b) is %d \n", result);
+    return 0;
+}
+</pre></div>
+<h1><u>output</u></h1>
+<div class="ex">
+<pre>
+(a == b) && (c > b) is 1 
+(a == b) && (c < b) is 0 
+(a == b) || (c < b) is 1 
+(a != b) || (c < b) is 0 
+!(a != b) is 1 
+!(a == b) is 0 
+</pre></div>
+<br><br><br><br>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
+function fun() {
+  var x = document.getElementById("when");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+</script>
+
